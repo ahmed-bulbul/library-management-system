@@ -93,29 +93,29 @@ jobs:
           docker push ${{ secrets.DOCKER_USERNAME }}/library-management-system:latest
           docker push ${{ secrets.DOCKER_USERNAME }}/library-management-system:${{ github.sha }}
 
-  deploy:
-    if: false
-    name: Deploy to Kubernetes
-    needs: build
-    runs-on: ubuntu-latest
-#    if: github.ref == 'refs/heads/main'
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up kubectl
-        uses: azure/setup-kubectl@v3
-        with:
-          version: 'v1.27.1'
-
-      - name: Configure K8s cluster
-        run: |
-          mkdir -p $HOME/.kube
-          echo "${{ secrets.KUBE_CONFIG }}" > $HOME/.kube/config
-
-      - name: Deploy manifests
-        run: |
-          kubectl apply -f k8s/
-          kubectl rollout status deployment/library-api-deployment
-          kubectl rollout status deployment/postgres-deployment
+#  deploy:
+#    if: false
+#    name: Deploy to Kubernetes
+#    needs: build
+#    runs-on: ubuntu-latest
+##    if: github.ref == 'refs/heads/main'
+#
+#    steps:
+#      - name: Checkout code
+#        uses: actions/checkout@v3
+#
+#      - name: Set up kubectl
+#        uses: azure/setup-kubectl@v3
+#        with:
+#          version: 'v1.27.1'
+#
+#      - name: Configure K8s cluster
+#        run: |
+#          mkdir -p $HOME/.kube
+#          echo "${{ secrets.KUBE_CONFIG }}" > $HOME/.kube/config
+#
+#      - name: Deploy manifests
+#        run: |
+#          kubectl apply -f k8s/
+#          kubectl rollout status deployment/library-api-deployment
+#          kubectl rollout status deployment/postgres-deployment
