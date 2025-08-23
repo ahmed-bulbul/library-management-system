@@ -221,7 +221,10 @@ The coverage report will be available at `target/site/jacoco/index.html`
 - Metrics: `GET /actuator/metrics`
 
 ## Outcome of the projects
-  
+
+- Swagger API Documentation
+<img width="1512" height="982" alt="image" src="https://github.com/user-attachments/assets/f51b4e86-96ca-479c-b215-0b95fc2c2e4c" />
+
 
 - Build Docker image locally </br>
 <img width="1512" height="982" alt="image" src="https://github.com/user-attachments/assets/ded9d609-b0ee-46c1-9ef9-ab77127f927f" />
