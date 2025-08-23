@@ -94,10 +94,11 @@ jobs:
           docker push ${{ secrets.DOCKER_USERNAME }}/library-management-system:${{ github.sha }}
 
   deploy:
+    if: false
     name: Deploy to Kubernetes
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+#    if: github.ref == 'refs/heads/main'
 
     steps:
       - name: Checkout code
