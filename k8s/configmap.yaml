@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: library-config
+  namespace: default
+data:
+  SPRING_PROFILES_ACTIVE: "prod"
+  DATABASE_URL: "jdbc:postgresql://postgres-service:5432/library_db"
+  DATABASE_USERNAME: "library_user"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: library-secrets
+  namespace: default
+type: Opaque
+data:
+  DATABASE_PASSWORD: bGlicmFyeV9wYXNz  # base64 encoded "library_pass"
