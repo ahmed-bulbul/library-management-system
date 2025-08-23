@@ -1,17 +1,14 @@
 package com.library;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.Import;
+import org.springframework.test.context.ActiveProfiles;
 
-@Import(TestcontainersConfiguration.class)
-@SpringBootTest
+@ActiveProfiles("test")
+@SpringBootTest(classes = {LibraryManagementSystemApplication.class}) // Only load main app, not TestcontainersConfiguration
 class LibraryManagementSystemApplicationTests {
 
 	@Test
-	@Disabled("Fails in CI/CD, no need to check context loading")
 	void contextLoads() {
 	}
-
 }
