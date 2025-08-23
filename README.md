@@ -219,4 +219,27 @@ The coverage report will be available at `target/site/jacoco/index.html`
 - Application health: `GET /actuator/health`
 - Application info: `GET /actuator/info`
 - Metrics: `GET /actuator/metrics`
-```
+
+## Outcome of the projects
+  
+
+- Build Docker image locally </br>
+<img width="1512" height="982" alt="image" src="https://github.com/user-attachments/assets/ded9d609-b0ee-46c1-9ef9-ab77127f927f" />
+
+
+- pushed to docker hub through github actions : </br>
+<img width="1503" height="746" alt="Screenshot 2025-08-24 at 1 08 00 AM" src="https://github.com/user-attachments/assets/2cb939c3-719e-4970-93e0-8d0423e7bd75" />
+
+
+- CI/CD pipeline execution through GitHub Actions </br>
+<img width="1491" height="617" alt="image" src="https://github.com/user-attachments/assets/80a5ebc4-6840-4ac8-94f4-fdda102da9f9" />
+
+- Test Report using: Jacoco </br>
+<img width="1512" height="982" alt="image" src="https://github.com/user-attachments/assets/7839b45d-24c2-424b-9d7b-ea3fbbd5a884" />
+
+
+
+
+
+
+
