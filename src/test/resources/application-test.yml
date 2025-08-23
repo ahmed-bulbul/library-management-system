@@ -26,9 +26,9 @@ spring:
       ddl-auto: create-drop
     properties:
       hibernate.dialect: org.hibernate.dialect.H2Dialect
-  testcontainers:
-    enabled: false
-
 
   flyway:
     enabled: false
+
+  testcontainers:
+    enabled: false   # 🚀 this prevents auto Testcontainers startup
